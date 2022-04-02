@@ -36,8 +36,7 @@ namespace Cheker_accounts
 
         private void writeToFile(string email)
         {
-            string fileName = Environment.CurrentDirectory + @"\\Results\\[Good] " + currentTime + ".txt";
-            File.AppendAllText(fileName, email + Environment.NewLine);
+            string fileName = Environment.CurrentDirectory + @"\Results\ " + ".txt"; // string fileName = Environment.CurrentDirectory + @"\Results\ " + currentTime + ".txt";            File.AppendAllText(fileName, email + Environment.NewLine);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -142,7 +141,7 @@ namespace Cheker_accounts
             accounts,
             new ParallelOptions
             {
-                MaxDegreeOfParallelism = Convert.ToInt32(numericUpDown1.Value) //NumericUpDown.Value
+                MaxDegreeOfParallelism = Convert.ToInt32(numericUpDown1.Value) 
             },
             combo =>
             {
